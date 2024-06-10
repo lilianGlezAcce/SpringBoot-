@@ -58,14 +58,25 @@ Estos dos videos nos ayudan para la comprensión de microservicios, ya que nos e
 *Int medallasBronce
 *String deporte
  - Agregar anotaciones como @NonNull, @Data
-3. Creación servicio Post, donde sea requisito agregar todos los datos del DAO
-4. Creación servicio Put, donde sea posible cambiar la cantidad de medallas de los equipos
-5. Creación servicio Delete, donde sea posible la eliminación de un equipo
-6. Creación de varios servicios Get, ejemplo
- - Obtención de todos los equipos por país
- - Obtención de los deportes que existen dependiendo del país 
 
-Favor de poner en práctica todo lo visto en los videos anteriores, el ejercicio deberá contener la estructura vista (@Component, @Service & @Controller), uso de inyección de dependencias, implementación de ResponseEntity, anotaciones de Spring, etc. 
+2.- Crear un Controlador, llamado “OlimpicosController”
+Donde llevará lo siguiente: 
+- Creación servicio Post, donde sea requisito agregar todos los datos del DAO (team)
+- Creación servicio Put, donde sea posible cambiar la cantidad de medallas de los equipos
+- Creación servicio Delete, donde sea posible la eliminación de un equipo
+- Creación de varios servicios Get, ejemplo:
+ *Obtención de todos los equipos por país
+ *Obtención de los deportes que existen dependiendo del país
+Nota:
+•	Todos los servicios, deberán empezar /juegosOlimpicos
+•	Si el servicio fue exitoso, devolver un 200, si ocurrió un error, da detalle y regresar el status 400, ejemplo:
+-	Se agrego/modifico/elimino exitosamente un registro – status 200
+-	Se quiere eliminar un registro que no existe – status 400
+
+3.- Crear una interfaz “OlimpicosInterfaz”, esta clase será llamada en el controller (@Autowired)
+4.- Crear un clase Service “OlimpicosService”, la cual será implementada por OlimpicosInterfaz, donde contendrá toda la lógica de los métodos previamente creados
+
+Se pondrá en práctica todo lo visto en los videos anteriores, el ejercicio deberá contener la estructura vista (@Component, @Service & @Controller), uso de inyección de dependencias, implementación de ResponseEntity, anotaciones de Spring, etc. 
 
 #### Example
 #### Testing and Validation requisites
